@@ -1,0 +1,160 @@
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu",
+        "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* topic tag */
+.ui-tag.no-background:not(:hover) {
+    background: none !important;
+}
+.ui-tag.no-background:not(:hover) > .count {
+    opacity: 0 !important;
+}
+
+/* stats calendar */
+.react-activity-calendar__calendar > g:not(.react-activity-calendar__legend-month) > rect {
+    stroke: none !important;
+    cursor: pointer;
+}
+.react-activity-calendar__calendar > g:not(.react-activity-calendar__legend-month) > rect:hover {
+    stroke: black !important;
+}
+
+/* modal content & background fade-in & out */
+/* use animations for rendering resilience  */
+.modal {
+    opacity: 0;
+    visibility: hidden;
+}
+.modal-visible {
+    animation: modalFadein 0.4s cubic-bezier(0.5, 1, 0.89, 1); /* easeOutQuad */
+    animation-fill-mode: both;
+}
+@keyframes modalFadein {
+    from {
+        opacity: 0;
+        visibility: hidden;
+    }
+    to {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+.modal-hidden {
+    animation: modalFadeOut 0.4s cubic-bezier(0.5, 1, 0.89, 1); /* easeOutQuad */
+    animation-fill-mode: both;
+}
+@keyframes modalFadeOut {
+    from {
+        opacity: 1;
+        visibility: visible;
+    }
+    to {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+/* modal content scaling */
+.modal-content {
+    transform: scale(0.9) translateY(20px);
+}
+.modal-visible > .modal-content {
+    animation: modalContentFadein 0.4s cubic-bezier(0.34, 1.56, 0.64, 1); /* easeOutBack */
+    animation-fill-mode: both;
+}
+@keyframes modalContentFadein {
+    from {
+        transform: scale(0.9) translateY(20px);
+    }
+    to {
+        transform: scale(1) translateY(0);
+    }
+}
+.modal-hidden > .modal-content {
+    animation: modalContentFadeOut 0.4s cubic-bezier(0.11, 0, 0.5, 0); /* easeInQuad */
+    animation-fill-mode: both;
+}
+@keyframes modalContentFadeOut {
+    from {
+        transform: scale(1) translateY(0);
+    }
+    to {
+        transform: scale(0.9) translateY(20px);
+    }
+}
+
+/* background close hover */
+.modal-visible > .modal-content:not(:hover) {
+    transform: scale(99.75%);
+}
+
+.force-graph-container {
+    opacity: 0;
+    transition: opacity 0.1s ease-out;
+}
+.render-done > .force-graph-container {
+    opacity: 1;
+}
+
+/* .topic-stat:not(:hover) {
+    background: rgb(250 250 249) !important;
+} */
+
+.calendar text {
+    fill: currentColor;
+    user-select: none;
+}
+
+/* .calendar rect.day:hover {
+    stroke-width: 2px;
+} */
+
+@keyframes calendarLoadingAnimation {
+    0% {
+        fill: var(--react-activity-calendar-loading);
+    }
+    50% {
+        fill: var(--react-activity-calendar-loading-active);
+    }
+    100% {
+        fill: var(--react-activity-calendar-loading);
+    }
+}
+
+@keyframes easeOutBounce {
+    0% {
+        transform: translateY(0%);
+        opacity: 0;
+    }
+    12% {
+        transform: translateY(10.89%);
+    }
+    24% {
+        transform: translateY(43.56%);
+    }
+    36% {
+        transform: translateY(98.01%);
+    }
+    54% {
+        transform: translateY(75.02%);
+    }
+    74% {
+        transform: translateY(98.37%);
+    }
+    82% {
+        transform: translateY(93.75%);
+    }
+    92% {
+        transform: translateY(99.34%);
+    }
+    96% {
+        transform: translateY(98.46%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(100%);
+    }
+}
