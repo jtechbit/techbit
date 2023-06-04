@@ -31,7 +31,8 @@
         "tinycolor2": "^1.4.2",
         "twemoji": "^14.0.2",
         "webext-options-sync": "^2.0.1",
-        "webextension-polyfill": "^0.8.0"
+        "webextension-polyfill": "^0.8.0",
+        "webextension-polyfill-ts": "^0.26.0"
     },
     "devDependencies": {
         "@babel/preset-env": "^7.16.11",

@@ -1,11 +1,38 @@
 {
-    "hide-files.files": [],
+    "hide-files.files": [
+        "docs",
+        "node_modules",
+        "patches",
+        ".gitignore",
+        ".prettierrc",
+        "DEVELOPMENT.md",
+        "LICENCE",
+        "README.md",
+        "tailwind.template.cjs",
+        "yarn.lock",
+        ".vscode",
+        "apps/serverless-screenshots",
+        "apps/serverless-import"
+    ],
     "files.exclude": {
         "**/.git": true,
         "**/.svn": true,
         "**/.hg": true,
         "**/CVS": true,
         "**/.DS_Store": true,
-        "**/Thumbs.db": true
+        "**/Thumbs.db": true,
+        "docs": true,
+        "node_modules": true,
+        "patches": true,
+        ".gitignore": true,
+        ".prettierrc": true,
+        "DEVELOPMENT.md": true,
+        "LICENCE": true,
+        "README.md": true,
+        "tailwind.template.cjs": true,
+        "yarn.lock": true,
+        ".vscode": true,
+        "apps/serverless-screenshots": true,
+        "apps/serverless-import": true
     }
 }
