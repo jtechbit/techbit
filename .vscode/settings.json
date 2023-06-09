@@ -2,7 +2,6 @@
     "hide-files.files": [
         "docs",
         "node_modules",
-        "patches",
         ".gitignore",
         ".prettierrc",
         "DEVELOPMENT.md",
@@ -23,7 +22,6 @@
         "**/Thumbs.db": true,
         "docs": true,
         "node_modules": true,
-        "patches": true,
         ".gitignore": true,
         ".prettierrc": true,
         "DEVELOPMENT.md": true,

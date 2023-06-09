@@ -40,7 +40,7 @@ export async function handleReportBrokenPage(data) {
     }
 
     try {
-        await fetch(`https://api2.lindylearn.io/report_broken_page`, {
+        await fetch(`https://hook.eu1.make.com/yoqritno8swpdvxy5vhxsousb5h30hlf`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -63,7 +63,7 @@ export async function submitElementBlocklistContentScript(selectors: string[]) {
     const domain = getDomain(url);
 
     try {
-        await fetch(`https://api2.lindylearn.io/report_blocked_elements`, {
+        await fetch(`https://hook.eu1.make.com/yoqritno8swpdvxy5vhxsousb5h30hlf`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
