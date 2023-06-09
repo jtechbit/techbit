@@ -8,6 +8,7 @@
     import SocialHighlightsControl from "./Controls/SocialHighlightsControl.svelte";
     import ThemeControl from "./Controls/ThemeControl.svelte";
     import BugReportControl from "./Controls/BugReportControl.svelte";
+    import AudioControl from "./Controls/AudioControl.svelte";
     import BoldifyControl from "./Controls/BoldifyControl.svelte"; // Importing BoldifyControl
     import type ElementPickerModifier from "../../content-script/modifications/elementPicker";
     import type SmartHighlightsProxy from "../../content-script/modifications/DOM/smartHighlightsProxy";
@@ -34,6 +35,7 @@
     <BoldifyControl /> <!-- Add this line -->
     <ThemeControl {domain} {themeModifier} />
     <PrivateNotesControl {annotationsModifer} {overlayModifier} {smartHighlightsProxy} />
+    <AudioControl/>
     <SocialHighlightsControl
         {annotationsModifer}
         {overlayModifier}
